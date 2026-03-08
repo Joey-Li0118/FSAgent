@@ -276,7 +276,7 @@ class FSANavigator:
                     full_prompt = f"{SYSTEM_PROMPT}\n\nPREVIOUS CONVERSATION:\n{history_text}\n\n{user_message}"
 
                 response = self.gemini_client.models.generate_content(
-                    model="gemini-2.0-flash-exp",
+                    model="gemini-2.5-flash",
                     contents=full_prompt
                 )
                 answer = response.text
