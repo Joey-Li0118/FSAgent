@@ -1,6 +1,7 @@
 import streamlit as st
 import os
 from chatbot.rag import FSANavigator
+from chatbot.demo_responses import get_demo_response
 
 st.set_page_config(
     page_title="FSAgent",
@@ -382,7 +383,9 @@ def get_navigator():
 with st.sidebar:
     st.header("About")
     st.write("FSA Navigator answers questions about FSA programs using official USDA handbooks. Every answer includes a citation so you can verify the source.")
-
+    st.divider()
+    judge_mode = st.sidebar.toggle("Judge Mode", value=False)
+    st.session_state.judge_mode = judge_mode
     st.divider()
     st.header("LLM Provider")
     llm_provider = st.radio(
@@ -457,7 +460,11 @@ def run_query(prompt):
                 {"role": m["role"], "content": m["content"]}
                 for m in st.session_state.messages
             ]
-            result = navigator.query(prompt, chat_history=history[-6:], provider=st.session_state.llm_provider)
+            if st.session_state.get("judge_mode"):
+                result = get_demo_response(prompt)
+            else:
+                navigator = st.session_state.navigator
+                result = navigator.query(prompt, chat_history=history[-6:], provider=st.session_state.llm_provider)
         st.markdown(result["answer"])
         if result["citations"]:
             with st.expander("📄 Sources"):
