@@ -1,0 +1,18 @@
+# Python Version Requirement: 3.11-3.13
+# Python 3.14+ is NOT supported due to chromadb compatibility issues
+# See PYTHON_COMPATIBILITY.md for details
+
+# Core dependencies - Tested versions with Python 3.12
+google-genai>=0.1.0  # Google Gemini API (imported in chatbot/rag.py)
+streamlit>=1.32.0,<2.0  # Web interface (app.py)
+chromadb>=0.4.0,<2.0  # Vector database - Warning: Not compatible with Python 3.14+ (chatbot/rag.py)
+pymupdf>=1.23.0,<2.0  # PDF parsing (chatbot/rag.py)
+sentence-transformers>=2.2.0,<6.0  # Embedding function for ChromaDB (chatbot/rag.py)
+
+# Environment and API clients
+python-dotenv>=0.19.0  # Environment variable management (chatbot/rag.py)
+groq>=0.4.0  # Groq API client (chatbot/rag.py)
+
+# Web scraping dependencies
+requests>=2.28.0  # HTTP requests (webscrape.py)
+beautifulsoup4>=4.11.0  # HTML parsing (webscrape.py)
