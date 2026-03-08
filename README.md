@@ -354,7 +354,7 @@ FSAgent/
 
 ---
 
-## 📚 Key FSA Handbook Sources
+## Key FSA Handbook Sources
 
 All documents are public domain and freely available:
 
