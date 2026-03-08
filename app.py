@@ -9,7 +9,7 @@ st.set_page_config(
     layout="centered"
 )
 
-st.title("🌾 FSA Navigator")
+st.title("🌾 FSAgent")
 st.caption("Ask plain-English questions about USDA Farm Service Agency programs — ARC, PLC, CRP, and more.")
 
 
@@ -382,7 +382,7 @@ def get_navigator():
 # --- Sidebar ---
 with st.sidebar:
     st.header("About")
-    st.write("FSA Navigator answers questions about FSA programs using official USDA handbooks. Every answer includes a citation so you can verify the source.")
+    st.write("FSAgent answers questions about FSA programs using official USDA handbooks. Every answer includes a citation so you can verify the source.")
     st.divider()
     judge_mode = st.sidebar.toggle("Judge Mode", value=False)
     st.session_state.judge_mode = judge_mode
