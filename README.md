@@ -1,10 +1,10 @@
-# 🌾 FSAgent: RAG-Powered USDA Farm Service Agency Chatbot
+# FSAgent: RAG-Powered USDA Farm Service Agency Chatbot
 
 A Retrieval-Augmented Generation (RAG) chatbot that helps farmers get plain-English answers about USDA Farm Service Agency (FSA) programs — ARC, PLC, CRP, and more — with citations back to official handbooks.
 
 ---
 
-## 📋 Problem Statement
+## Problem Statement
 
 Farmers face significant challenges accessing and understanding USDA Farm Service Agency (FSA) program information:
 
@@ -17,7 +17,7 @@ Farmers face significant challenges accessing and understanding USDA Farm Servic
 
 ---
 
-## 💡 Solution Overview
+## Solution Overview
 
 FSAgent is a RAG-powered chatbot that:
 
@@ -30,16 +30,21 @@ FSAgent is a RAG-powered chatbot that:
 
 ### Key Capabilities
 
-✅ Answer questions about ARC (Agricultural Risk Coverage), PLC (Price Loss Coverage), CRP (Conservation Reserve Program), and other FSA programs
-✅ Provide citations with document name, page number, and section references
-✅ Upload and ingest new FSA handbooks on demand
-✅ Web scraping tool to automatically download official USDA handbooks
-✅ Evaluation harness to benchmark answer accuracy against known Q&A pairs
-✅ User-friendly chat interface with example questions and expandable citations
+Answer questions about ARC (Agricultural Risk Coverage), PLC (Price Loss Coverage), CRP (Conservation Reserve Program), and other FSA programs
+
+Provide citations with document name, page number, and section references
+
+Upload and ingest new FSA handbooks on demand
+
+Web scraping tool to automatically download official USDA handbooks
+
+Evaluation harness to benchmark answer accuracy against known Q&A pairs
+
+User-friendly chat interface with example questions and expandable citations
 
 ---
 
-## 🔧 Technical Approach
+## Technical Approach
 
 ### Architecture
 
@@ -136,7 +141,7 @@ The `eval.py` script provides automated testing:
 
 ---
 
-## 📊 Results
+## Results
 
 ### Current Performance
 
@@ -158,12 +163,17 @@ A: "Producers with Adjusted Gross Income exceeding $2.5 million are ineligible f
 
 ### Key Features Demonstrated
 
-✅ Multi-document ingestion (226 USDA PDF files supported)
-✅ Real-time PDF upload and processing
-✅ Expandable citation UI for source verification
-✅ Dual LLM backend support with seamless switching
-✅ Persistent chat history within sessions
-✅ Quality filtering to exclude low-value chunks
+Multi-document ingestion (226 USDA PDF files supported)
+
+Real-time PDF upload and processing
+
+Expandable citation UI for source verification
+
+Dual LLM backend support with seamless switching
+
+Persistent chat history within sessions
+
+Quality filtering to exclude low-value chunks
 
 ### Known Limitations
 
@@ -175,7 +185,7 @@ A: "Producers with Adjusted Gross Income exceeding $2.5 million are ineligible f
 
 ---
 
-## 🚀 Run Instructions
+## Run Instructions
 
 ### Prerequisites
 
@@ -278,9 +288,9 @@ python eval.py
 # ==================================================
 # Documents in DB: 12,345 chunks
 #
-# ✅ Q1: What is the payment limit for ARC-CO for a single person?
+# Q1: What is the payment limit for ARC-CO for a single person?
 #    Missing: nothing
-# ✅ Q2: What does ARC stand for?
+# Q2: What does ARC stand for?
 #    Missing: nothing
 # ...
 # Score: 28/32
@@ -308,7 +318,7 @@ FSAgent/
 
 ---
 
-## 🔍 Improvement Opportunities
+## Improvement Opportunities
 
 ### 1. Intelligent Chunking
 **Current**: Fixed 800-character chunks
@@ -355,19 +365,19 @@ All documents are public domain and freely available:
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This tool is for **informational purposes only**. Always verify program details, eligibility requirements, and payment calculations with your local FSA County Office before making farm management decisions. This chatbot is not a substitute for professional agricultural, legal, or financial advice.
 
 ---
 
-## 📄 License
+## License
 
 This project uses public domain USDA documents. The code is provided as-is for educational and agricultural support purposes.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Priority areas:
 
@@ -378,7 +388,7 @@ Contributions are welcome! Priority areas:
 
 ---
 
-## 📞 Support
+## Support
 
 For technical issues with the chatbot, please check the code in `chatbot/rag.py` and `app.py`.
 
